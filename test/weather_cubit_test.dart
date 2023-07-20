@@ -7,6 +7,8 @@ import 'package:mocktail/mocktail.dart';
 import 'package:weather_repository/weather_repository.dart'
     as weather_repository;
 
+import 'helpers/hydrated_bloc.dart';
+
 const weatherLocation = 'London';
 const weatherCondition = weather_repository.WeatherCondition.rainy;
 const weatherTemperature = 9.8;
@@ -17,7 +19,7 @@ class MockWeatherRepository extends Mock
 class MockWeather extends Mock implements weather_repository.Weather {}
 
 void main() {
-  //initHydratedStorage();
+  initHydratedStorage();
 
   group('WeatherCubit', () {
     late weather_repository.Weather weather;

@@ -6,6 +6,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:weather_repository/weather_repository.dart';
 
+import 'helpers/hydrated_bloc.dart';
+
 class MockWeather extends Mock implements weather.Weather {
   MockWeather(this._condition);
 
@@ -16,7 +18,7 @@ class MockWeather extends Mock implements weather.Weather {
 }
 
 void main() async {
-  //initHydratedStorage();
+  initHydratedStorage();
 
   group('ThemeCubit', () {
     test('initial state is correct', () {
